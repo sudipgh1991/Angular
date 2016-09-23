@@ -1,0 +1,27 @@
+﻿<div class="container">
+    <div class="panel panel-primary" ng-repeat="user in Users">
+        <div class="panel-heading">
+
+            <!--<h4>{{User1.UserName}}</h4>-->
+            <h4>{{user.Username}}</h4>
+
+        </div>
+
+
+        <div class="panel-body">
+
+            <h5 ng-show="ShowPassword==true">Password: {{user.Password}}</h5>
+            <h5>Permissions</h5>
+            <ul>
+                <li ng-repeat="p in user.Permission">
+                    {{p}}
+                </li>
+            </ul>
+            
+
+        </div>
+
+    </div>
+    <button class="btn btn-primary" ng-click="toggleShow()">{{ButtonText}}</button>
+
+</div>
